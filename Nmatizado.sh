@@ -24,7 +24,7 @@ if [ "$eleccion_puertos" = "s" ]; then
     read -p "Ingrese el rango de puertos (ej. 20-80): " rango_puertos
 fi
 
-comando_nmap="nmap"
+comando_nmap="nmap -v"
 
 case $tipo_escaneo in
     1) comando_nmap+=" -F" ;;
