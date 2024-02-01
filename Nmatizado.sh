@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if ! command -v nmap &> /dev/null; then
+    echo "Nmap no está instalado. Intentando instalarlo..."
+    sudo apt-get update
+    sudo apt-get install nmap -y
+fi
+
 read -p "Ingrese la dirección IP o rango de IPs para escanear: " objetivo
 
 echo "Seleccione el tipo de escaneo:"
